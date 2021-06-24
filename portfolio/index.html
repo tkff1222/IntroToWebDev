@@ -2,13 +2,23 @@
 <!--
 Name: Chloe Tang
 Date Created: 21 June 2021
-Most recent revision: 
+Most recent revision: 24 June 2021
 -->
 <html lang="en">
     <head>
         <!-- Content in the head element is not visible in the browser window, although the title will appear in the title bar or page tab. -->
         <title>Chloe Tang's Portfolio</title>
     </head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+        }
+    </style>
     <body>
         <main>
             <!--Any content you want users to see in the browser window must be in the body element.-->
@@ -16,24 +26,25 @@ Most recent revision:
                 <!--The header element typically includes a link to the website's home page, the page's title, and links to other pages in the website, and it usually appears across the top of the browser window.-->
                 <h1>Porfolio for Chloe Tang</h1>
             </header>
-            <hr />
             <nav>
-                <!-- We need to add links to projects.html, contact.html, and testimonials.html -->
                 <!-- The nav element will include navigation buttons or links -->
                 <hr />
-                <p><a href="">Home</a></p>
-                <p><a href="projects.html">Projects</a></p>
-                <p><a href="contact.html">Contact</a></p>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>   
+                </ul>
                 <hr />
             </nav>
-            <hr />
             <!--The main content of the page will appear between the header and footer elements. It is common to use one or more div elements to break the content into chunks that should use the same formatting options when CSS is added to the page.-->
             <section id="main-content">
                 <article id="about-me">
                     <h2><em>About Me</em></h2>
                     <p><img src="images/profile_cover.jpg" 
-                            alt="Photo of me looking at a mountain"
-                            style="width: 95%;"/></p>
+                            alt="icon"
+                            width="95%"/>
+                    </p>
                     <p>Hello! Welcome to my portfolio website. You can call me a <span style="background-color: powderblue;">developer</span>. I enjoyed getting involved in the development of <strong>software</strong> and <strong>personal life</strong>.</p>
                     <p>I would say I am a <span style="background-color: powderblue;">specialist</span> in providing solutions. Whenever I am solving a problem, I look for the right information. Organize and Present them for my clients. </p>
                 </article>
@@ -41,6 +52,34 @@ Most recent revision:
                     <h2><em>Past Experiences</em></h2>
                     <p><span style="border: thin solid darkblue;">Web Development:</span> I have challenged myself to revamp a website front-end for a financial institution using <strong>2 weeks</strong>. Click to see the Before & After</p>
                     <p><span style="border: thin solid darkblue;">Personal Development:</span> I have challenged myself to read 20 pages of a book for <strong>5 days</strong>.</p>
+                    <table>
+                        <caption>Employment History</caption>
+                        <tr>
+                            <th>Employment Period</th>
+                            <th>Title</th>
+                            <th>Company</th>
+                        </tr>
+                        <tr>
+                            <td>Jan 2020 - Feb 2020</td>
+                            <td>Web Developer</td>
+                            <td>Quantitative Solution Hong Kong</td>
+                        </tr>
+                        <tr>
+                            <td>Sep 2020 - Dec 2019</td>
+                            <td>Front-end Developer</td>
+                            <td>PwC Mainland China and Hong Kong</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 2019 - Jul 2019</td>
+                            <td>Front-end Developer</td>
+                            <td>Block Manic</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2017 - Present</td>
+                            <td>IT undergrad</td>
+                            <td>The Hong Kong Polytechnic University</td>
+                        </tr>
+                    </table>
                 </article>
                 <article id="current-project">
                     <h2><em>Current Project</em></h2>
