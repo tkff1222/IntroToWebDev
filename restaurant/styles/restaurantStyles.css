@@ -1,7 +1,7 @@
 body {
     font-family:"Times New Roman", Times, serif;
     color: #242625;
-    background-color: lightgray;
+    background-color: #ebefef;
     margin: 10px;
     padding: 0%;
     text-align: center;
@@ -11,37 +11,43 @@ header {
     /* change font for header */
     font-family: Georgia, serif;   
     font-weight: 100;
-    color:#3f2b13;
+    color:#3a2f20;
     margin-left: auto;
 } 
 
-nav {
-
-}
-
-footer {
-
-}
-
 /* unvisited link */
 a:link {
-    color: red;
+    color: #9f8c79;
     text-decoration: underline;
 }
   
 /* visited link */
 a:visited {
-    color: green;
+    color: white;
 }
   
 /* mouse over link */
 a:hover {
     font-weight: 900;
-    color: hotpink;
+    color: #966d48;
 }
   
 /* selected link */
 a:active {
-    color: blue;
+    color: #3a2f20;
     text-decoration: null;
+}
+
+.btn-nav {
+    border-color: #3a2f20;
+    background-color: #9f8c79;
+}
+
+.btn-nav:hover {
+    color: #b3b6b8;
+    background-color: #966d48;
+}
+
+hr {
+    border-top: 1px solid transparent;
 }
