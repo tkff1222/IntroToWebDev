@@ -6,6 +6,7 @@ Most recent revision:
 -->
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/restaurantStyles.css">
         <title>Menu</title>
     </head>
@@ -14,18 +15,8 @@ Most recent revision:
             <h1>Not Only Vegan Restaurant</h1>
         </header>
         <style>
-            * {
-                box-sizing: border-box;
-            }
-            .column {
-                float: left;
-                width: 33.33%;
-                padding: 10px;
-            }
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
+            body {
+                background-color: lightgoldenrodyellow;
             }
             ul {
                 list-style-type: none;
@@ -34,6 +25,21 @@ Most recent revision:
             }
             li {
                 display: inline;
+            }
+            table, th, td {
+                text-align: center;
+                border: 1px solid black;
+            }
+            table {
+                border-collapse: collapse;
+                width: 50%;
+                margin: auto;
+            }
+            caption {
+                font-size: medium;
+                color: black;
+                font-weight: 900;
+                text-align: center;
             }
         </style>
         <nav>
@@ -46,24 +52,24 @@ Most recent revision:
             <hr />
         </nav>
         <div class="row">
-            <div class="column">
-                <p>Burger and Fries</p>
+            <div class="col-sm-12 col-md-4">
+                <h4>Burger and Fries</h4>
                 <p>An American Classic!</p>
                 <p>Your choice - with or without cheese</p>
                 <p>Pickle, onion, tomato, and lettuce</p>
                 <p>Served with our famous thick cut french fries</p>
                 <p>HKD$25</p>
             </div>
-            <div class="column">
-                <p>Burger and Fries</p>
+            <div class="col-sm-12 col-md-4">
+                <h4>Burger and Fries</h4>
                 <p>An American Classic!</p>
                 <p>Your choice - with or without cheese</p>
                 <p>Pickle, onion, tomato, and lettuce</p>
                 <p>Served with our famous thick cut french fries</p>
                 <p>HKD$25</p>
             </div>
-            <div class="column">
-                <p>Burger and Fries</p>
+            <div class="col-sm-12 col-md-4">
+                <h4>Burger and Fries</h4>
                 <p>An American Classic!</p>
                 <p>Your choice - with or without cheese</p>
                 <p>Pickle, onion, tomato, and lettuce</p>
@@ -72,24 +78,24 @@ Most recent revision:
             </div>
         </div>
         <div class="row">
-            <div class="column">
-                <p>Burger and Fries</p>
+            <div class="col-sm-12 col-md-4">
+                <h4>Burger and Fries</h4>
                 <p>An American Classic!</p>
                 <p>Your choice - with or without cheese</p>
                 <p>Pickle, onion, tomato, and lettuce</p>
                 <p>Served with our famous thick cut french fries</p>
                 <p>HKD$25</p>
             </div>
-            <div class="column">
-                <p>Burger and Fries</p>
+            <div class="col-sm-12 col-md-4">
+                <h4>Burger and Fries</h4>
                 <p>An American Classic!</p>
                 <p>Your choice - with or without cheese</p>
                 <p>Pickle, onion, tomato, and lettuce</p>
                 <p>Served with our famous thick cut french fries</p>
                 <p>HKD$25</p>
             </div>
-            <div class="column">
-                <p>Burger and Fries</p>
+            <div class="col-sm-12 col-md-4">
+                <h4>Burger and Fries</h4>
                 <p>An American Classic!</p>
                 <p>Your choice - with or without cheese</p>
                 <p>Pickle, onion, tomato, and lettuce</p>
@@ -97,6 +103,29 @@ Most recent revision:
                 <p>HKD$25</p>
             </div>
         </div>
+        <table>
+            <caption>Beverages</caption>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <th>Root Bear</th>
+                <th>$15</th>
+            </tr>
+            <tr>
+                <th>Water</th>
+                <th>$7</th>
+            </tr>
+            <tr>
+                <th>Lemonade</th>
+                <th>$6</th>
+            </tr>
+            <tr>
+                <th>Iced Tea</th>
+                <th>$7</th>
+            </tr>
+        </table>
         <footer>
             <hr />
             <p>981 Upper Serving Road, Singapore, 551337</p>
