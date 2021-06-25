@@ -1,0 +1,47 @@
+body {
+    font-family:"Times New Roman", Times, serif;
+    color: #242625;
+    background-color: lightgray;
+    margin: 10px;
+    padding: 0%;
+    text-align: justify;
+}
+
+header {
+    /* change font for header */
+    font-family: Georgia, serif;   
+    font-weight: 100;
+    color:#3f2b13;
+    margin-left: auto;
+} 
+
+nav {
+
+}
+
+footer {
+
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+    text-decoration: underline;
+}
+  
+/* visited link */
+a:visited {
+    color: green;
+}
+  
+/* mouse over link */
+a:hover {
+    font-weight: 900;
+    color: hotpink;
+}
+  
+/* selected link */
+a:active {
+    color: blue;
+    text-decoration: null;
+}
