@@ -15,9 +15,35 @@ header {
     margin-left: auto;
 } 
 
-footer {
-    
+/* for navbar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
+nav li {
+    display: inline;
+}
+
+.btn {
+    padding: 5px;
+}
+
+.btn-nav {
+    border-color: #3a2f20;
+    background-color: #9f8c79;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #8f8993;
+}
+
+.btn-nav:hover {
+    color: #b3b6b8;
+    background-color: #966d48;
+}
+
 
 /* unvisited link */
 a:link {
@@ -35,6 +61,12 @@ a:hover {
     font-weight: 900;
     color: #966d48;
 }
+
+/* mouse over icon link */
+svg:hover {
+    /* font-size: 40px; */
+    color: #3a2f20;
+}
   
 /* selected link */
 a:active {
@@ -42,16 +74,26 @@ a:active {
     text-decoration: null;
 }
 
-.btn-nav {
-    border-color: #3a2f20;
-    background-color: #9f8c79;
+/* for review link */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
 }
 
-.btn-nav:hover {
-    color: #b3b6b8;
-    background-color: #966d48;
+.text-container {
+    width: 60%;
+    margin: auto;
 }
+
 
 hr {
     border-top: 1px solid transparent;
+}
+
+footer {
+    
 }
