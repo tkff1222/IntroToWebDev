@@ -32,6 +32,14 @@ Most recent revision: 26 June 2021
                 }
                 return( true );
             }
+            function reset() {
+                // Best Days to contact you
+                document.getElementById("gridCheck1").checked = false;
+                document.getElementById("gridCheck2").checked = false;
+                document.getElementById("gridCheck3").checked = false;
+                document.getElementById("gridCheck4").checked = false;
+                document.getElementById("gridCheck5").checked = false;
+            }
         </script>
         <noscript>Please enable JavaScript!</noscript>
 
@@ -216,7 +224,7 @@ Most recent revision: 26 June 2021
 
             </form>  
         </div> -->
-        <form name="contactForm" onsubmit="return(validateEmail());">
+        <form name="contactForm" onsubmit="return validateEmail() && reset()">
             <div class="form-group row">
                 <label for="inputName3" class="col-sm-5 col-form-label text-right">Name:</label>
                 <div class="col-sm-4">
