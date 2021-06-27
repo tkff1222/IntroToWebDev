@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+Name: Chloe Tang
+Date Created: 26 June 2021
+Most recent revision: 27 June 2021
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Lucky Seven Page</title>
+        <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script type = "text/javascript">
+            let inputBet = 0;
+            let totalRoll = 0;
+            let maxAmount = 0;
+            let maxAmountRollCount = 0;
+
+            function errorCheck () {
+                inputBet = document.getElementById("inputBet").value;
+                console.log("The current inputBet value is",inputBet);
+                if (inputBet <= 0 ) {
+                    alert("Please enter correct bet value");
+                    return false;
+                }
+                return true;
+            }
+
+            function rollDice() {
+                var gameMoney = inputBet;
+                maxAmount = inputBet;
+                console.log("The current maxAmount value is",maxAmount);
+
+                var dice = {
+                    sides: 6,
+                    roll: function () {
+                        var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+                        return randomNumber;
+                    }
+                }
+
+                // game flow
+                while (gameMoney > 0) {
+                    var result1 = dice.roll();
+                    var result2 = dice.roll();
+                    totalRoll = totalRoll + 2;
+                    var diceTotal = result1 + result2;
+                    if (diceTotal == 7) {
+                        gameMoney = gameMoney + 4;
+                    } else {
+                        gameMoney = gameMoney - 1;
+                    }
+                    if (gameMoney > maxAmount) {
+                        maxAmount = gameMoney;
+                        maxAmountRollCount = totalRoll;
+                    }
+                }
+                alert("Game Over! Result will be displayed.");
+                displayResult();
+            }
+
+            function displayResult() {
+                console.log("The result is",inputBet,totalRoll,maxAmount,maxAmountRollCount);
+                
+                //create table to display result
+                var div = document.getElementById("divResult");
+                console.log("Div is ",div);
+                tbl  = document.createElement('table');
+                tbl.style.width  = '100px';
+                tbl.style.border = '1px solid black';
+
+                const resultIndex = ["Starting Bet","Total Rolls Before Going Broke","Highest Amount Won","Roll Count at Highest Amount Won"];
+                const resultValue = [inputBet,totalRoll,maxAmount,maxAmountRollCount]
+    
+                for(var i = 0; i < 4; i++){
+                    var tr = tbl.insertRow();
+                    for(var j = 0; j < 2; j++){
+                        var td = tr.insertCell();
+                        td.style.border = '1px solid black';
+                        if ( j == 0 ) { //index
+                            td.appendChild(document.createTextNode(resultIndex[i]));
+                        } else { //value
+                            td.appendChild(document.createTextNode(resultValue[i]));
+                        } 
+                    }
+                }
+                div.appendChild(tbl);
+                alert("Click to play again!");
+            }
+            
+        </script>
+        <noscript>Please enable JavaScript!</noscript>
+        
+        <hedaer>
+            <h1>Lucky Sevens</h1>
+        </hedaer>
+        <form>
+            <div class="form-group row">
+                <label for="inputBet" class="col-sm-2 col-form-label text-right">Starting Bet:</label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputBet" placeholder="$0.0" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4 text-center">
+                  <button type="submit" class="btn btn-primary btn-nav" onclick="errorCheck() && rollDice()">Play</button>
+                </div>
+            </div>
+        </form>
+        <div id="divResult"></div>
+        <footer>
+            <p>&copy; 2021 Chloe Tang, All rights reserved.</p>
+        </footer>
+    </body>
+</html>
